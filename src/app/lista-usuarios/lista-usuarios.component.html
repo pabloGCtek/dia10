@@ -1,0 +1,22 @@
+
+<h1>Lista</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>DNI</td>
+        <td>Nombre</td>
+        <td>Horas</td>
+    </tr>
+    <tr *ngFor="let us of lista">
+        <td>{{us.id}}</td>
+        <td>{{us.dni}}</td>
+        <td>{{us.nombre}}</td>
+        <td>{{us.horas}}</td>
+        <td><a class="button" [routerLink]="['/formulario',us.id]">Modificar</a> |</td>
+
+    </tr>
+    <tr>
+        <td><input type="button" [routerLink]="['/formulario']" value="Nueva alta"></td>
+      </tr>
+</table>
+<router-outlet></router-outlet>
